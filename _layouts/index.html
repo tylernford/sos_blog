@@ -3,7 +3,7 @@ layout: default
 ---
 
 <style>
-.css-post-card {
+.css-post-card-outer {
     width:31.03448275862069%;
 }
 </style>
@@ -15,19 +15,21 @@ layout: default
 
         <div class="flex flex-wrap justify-between" >
             {% for post in page.posts %}
-            <div class="bg-white   css-post-card" style="margin-top:3.4482758621%">
-                <img class="db" src="{{ post.image }}" />
-                <div class="ph3">
-                    <p class="f6 fw8 lh-solid mb2 mt3 pt2 red tracked-narrow ttu   ph2">Topic Here</p>
-                    <h1 class="fw7 lh-title mt0 tracked-narrow ttu   ph2" style="font-size:21px">Blog Title Here and Then Break to New Line</h1>
-                    <p class="f6 fw4 gray lh-title mb4   ph2">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
-                    <p class="f6 fw4 lh-solid light-silver mb3 pb2 tr ttu   ph2">08.19.17</p>
+            <div class="bgf-green   css-post-card-outer">
+                <div class="bg-white" style="margin-top:11.11111111111111%">
+                    <img class="db" src="{{ post.image }}" />
+                    <div class="ph3">
+                        <p class="f6 fw8 lh-solid mb2 mt3 pt2 red tracked-narrow ttu   ph2">Topic Here</p>
+                        <h1 class="fw7 lh-title mt0 tracked-narrow ttu   ph2" style="font-size:21px">Blog Title Here and Then Break to New Line</h1>
+                        <p class="f6 fw4 gray lh-title mb4   ph2">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
+                        <p class="f6 fw4 lh-solid light-silver mb0 pb0 mfb3 pfb2 tr ttu   ph2" style="padding-bottom:1.5rem">08.19.17</p>
+                    </div>
                 </div>
             </div>
             {% endfor %}
             <!-- begin sad hack for grid -->
-            <div class="css-post-card"></div>
-            <div class="css-post-card"></div>
+            <div class="css-post-card-outer"></div>
+            <div class="css-post-card-outer"></div>
             <!-- end sad hack for grid -->
         </div>
     </div>
