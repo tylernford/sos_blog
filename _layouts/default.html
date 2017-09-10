@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>SOS - Outpost Games</title>
+
+		<link rel="canonical" href="" />
+		<meta name="description" content="" />
+    	<meta name="keywords" content="" />
+		<meta name="geo.region" content="" />
+		<meta name="geo.placename" content="" />
+		<meta name="robots" content="all" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="css/tachyons.css" rel="stylesheet">
+		<link href="css/magnific.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+		<link href="css/hamburger.css" rel="stylesheet">
+
+        <script src="https://use.typekit.net/zok1cii.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="tk-din-2014">
+        {% include nav.html %}
+
+		{{ content }}
+
+		{% include footer.html %}
+	</body>
+
+	<!-- JS Libraries -->
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/smooth-scroll.min.js"></script>
+	<script src="js/gumshoe.js"></script>
+	<script src="js/magnific.js"></script>
+
+	<!-- Custom JS -->
+	<script src="js/navigation.js"></script>
+	<script>
+		/* Smooth Scroll */
+		smoothScroll.init({
+    		offset: 200
+		});
+		/* Gumeshoe */
+		gumshoe.init({
+			offset: 230
+		});
+
+		/* Image Gallery */
+		$(document).ready(function() {
+			$('.gallery-item').magnificPopup({
+				type: 'image',
+				gallery:{
+					enabled:true
+				}
+			});
+		});
+
+		/* Video Gallery */
+		$(document).ready(function() {
+    		$('.popup-youtube').magnificPopup({
+        		disableOn: 0,
+        		type: 'iframe',
+        		mainClass: 'mfp-fade',
+        		removalDelay: 160,
+        		preloader: false,
+        		fixedContentPos: false,
+				gallery:{
+    				enabled:true
+  				}
+    		});
+		});
+
+		/* Toggle Video Gallery */
+		(function() {
+	        function transformStart() {
+	            document.querySelector("#video-gallery").classList.toggle("show");
+	            document.querySelector("#image-gallery").classList.toggle("show");
+	            document.querySelector("#video-gallery-button").classList.toggle("show");
+	            document.querySelector("#image-gallery-button").classList.toggle("show");
+	        }
+	        document.querySelector("#video-gallery-button").addEventListener("click", transformStart);
+	    })();
+
+		/* Toggle Image Gallery */
+	    (function() {
+	        function transformStart() {
+	            document.querySelector("#video-gallery").classList.toggle("show");
+	            document.querySelector("#image-gallery").classList.toggle("show");
+	            document.querySelector("#video-gallery-button").classList.toggle("show");
+	            document.querySelector("#image-gallery-button").classList.toggle("show");
+	        }
+	        document.querySelector("#image-gallery-button").addEventListener("click", transformStart);
+	    })();
+	</script>
+</html>

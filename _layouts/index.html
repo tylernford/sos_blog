@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<style>
+.css-post-card {
+    width:31.03448275862069%;
+}
+</style>
+<main class="bg-washed-yellow   ph5-l">
+    <div class="center" style="max-width:72.5rem">
+        <h1 class="f-32 fw8 gold tc ttu   f-50-ns mt6">News</h1>
+
+        {% include featured_post.html %}
+
+        <div class="flex flex-wrap justify-between" >
+            {% for post in page.posts %}
+            <div class="bg-white   css-post-card" style="margin-top:3.4482758621%">
+                <img class="db" src="{{ post.image }}" />
+                <div class="ph3">
+                    <p class="f6 fw8 lh-solid mb2 mt3 pt2 red tracked-narrow ttu   ph2">Topic Here</p>
+                    <h1 class="fw7 lh-title mt0 tracked-narrow ttu   ph2" style="font-size:21px">Blog Title Here and Then Break to New Line</h1>
+                    <p class="f6 fw4 gray lh-title mb4   ph2">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
+                    <p class="f6 fw4 lh-solid light-silver mb3 pb2 tr ttu   ph2">08.19.17</p>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- begin sad hack for grid -->
+            <div class="css-post-card"></div>
+            <div class="css-post-card"></div>
+            <!-- end sad hack for grid -->
+        </div>
+    </div>
+</div>
+
+        <div class="center ph3 mw-67   ph4-ns   mt7" id="media">
+            <div class="center flex flex-wrap justify-between" id="gallery-buttons">
+                <button class="b--red ba br2 bw1 f5 ff3 fw7 pointer tc tk-din-2014 tracked ttu   f4-ns   bw2-l show" href="/" id="image-gallery-button">Image Gallery</button>
+                <button class="b--red ba br2 bw1 f5 ff3 fw7 pointer tc tk-din-2014 tracked ttu   f4-ns   bw2-l" href="/" id="video-gallery-button">Video Gallery</button>
+            </div>
+        </div>
+    </div>
+</main>
