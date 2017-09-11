@@ -3,7 +3,48 @@ layout: default
 ---
 
 <style>
+.bg-putty{background-color:#FAF8F5}
+.nearf-black{color:#0B0704}
+
+
+.bg-center{background-position: center}
 .f-18{font-size:1.125rem}
+.mb-3_75{margin-bottom:3.75rem}
+.mw-72_5{max-width:72.5rem}
+.pb-1_5{padding-bottom:1.5rem}
+.pb-60{padding-bottom:3.75rem}
+.shadow-6-hover:hover{
+  -webkit-box-shadow: 0px 4px 25px 2px rgba(0,0,0,.3);
+  box-shadow:         0px 4px 25px 2px rgba(0,0,0,.3);
+}
+.top-5{top:5rem}
+
+.css-main {padding-top:60px}
+#css-map-background {
+    background-image: url('../assets/map-background-ns.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:cover;
+    height:750px
+}
+@media screen and (min-width:30em) {
+    .f-18-ns{font-size:1.125rem}
+}
+@media screen and (min-width:60em) {
+    #css-map-background {
+        background-image: url('../assets/map-background-l.png');
+    	background-repeat: no-repeat;
+    	background-position: top center;
+        background-size:cover;
+        height:1500px
+    }
+}
+@media screen and (min-width:120em) {
+    #css-map-background {
+        background-image: url('../assets/map-background-xl.png');
+    }
+}
+.css-post-card-wrapper {padding-top:4rem}
 .css-post-card-inner {margin-top:2rem}
 @media screen and (min-width:30em) {
     .css-post-card-outer {width:47.68518518518518%}
@@ -22,28 +63,44 @@ layout: default
     .f3\@45-60{font-size:1.5rem}
 }
 @media screen and (min-width:60em) {
+    .css-post-card-wrapper {padding-top:6.4375rem}
     .css-post-card-outer {width:31.03448275862069%}
     .css-post-card-inner{margin-top:11.11111111111111%;}
 }
 </style>
-<main class="bg-washed-yellow ph3   ph4-ns   ph5-l">
-    <div class="center mw-72_5   pfh3-ns">
-        <h1 class="f-32 fw8 gold tc ttu   f-50-ns mt6">News</h1>
+<div class="absolute top-5 w-100 z-0" id="css-map-background">
+</div>
+<main class="bg-putty pb-60 ph3   ph4-ns   ph5-l   css-main">
+    <div class="center mb-3_75 mw-72_5 relative z-1   css-post-card-wrapper">
+        <h1 class="f2 fw8 gold mb3 mt0 pv0 lh-title tc tracked-narrow ttu   f1-ns mb4-ns   mb5-l">News</h1>
+        <!-- Messing Around with Tag Sorting --
+        <div class="center f4 flex flex-wrap fw7 justify-around lh-title mw-53_5 red tracked ttu   f3-ns   css-category-list" style="margin-bottom:6rem">
+            {% assign sorted_tags = site.tags | sort %}
+            {% for tag in sorted_tags %}
+              {% assign t = tag | first %}
+              {% assign posts = tag | last %}
+              <a class="db link mt0 nowrap red   mb2-l mh3-l" href="">{{ t }}</a>
+            {% endfor %}
+        </div>
+        <!-- Messing Around with Tag Sorting -->
+
+        {% include category_list.html %}
 
         {% include featured_post.html %}
 
-        <div class="flex flex-wrap justify-between" >
+        <!-- List of Post Cards -->
+        <div class="flex flex-wrap justify-between">
             {% for post in page.posts %}
-            <div class="bgf-green   css-post-card-outer">
-                <div class="bg-white   css-post-card-inner">
+            <div class="css-post-card-outer">
+                <a class="bg-white db link near-black shadow-6-hover   css-post-card-inner" href="/">
                     <img class="db w-100" src="{{ post.image }}" />
                     <div class="ph3">
                         <p class="f7 fw8 lh-solid mb2 mt3 ph2@45 pt2 red tracked-narrow ttu   f6@45">Topic Here</p>
                         <h1 class="f5 fw7 lh-title mt0 ph2@45 tracked-narrow ttu   f4@45">Blog Title Here and Then Break to New Line</h1>
                         <p class="f6 fw4 gray lh-title mb4 ph2@45">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
-                        <p class="f6 fw4 lh-solid light-silver mb0 pb0 ph2@45 tr ttu" style="padding-bottom:1.5rem">08.19.17</p>
+                        <p class="f6 fw4 lh-solid light-silver mb0 pb-1_5 ph2@45 tr ttu">08.19.17</p>
                     </div>
-                </div>
+                </a>
             </div>
             {% endfor %}
             <!-- begin sad hack for grid -->
@@ -52,13 +109,5 @@ layout: default
             <!-- end sad hack for grid -->
         </div>
     </div>
-</div>
-
-        <div class="center ph3 mw-67   ph4-ns   mt7" id="media">
-            <div class="center flex flex-wrap justify-between" id="gallery-buttons">
-                <button class="b--red ba br2 bw1 f5 ff3 fw7 pointer tc tk-din-2014 tracked ttu   f4-ns   bw2-l show" href="/" id="image-gallery-button">Image Gallery</button>
-                <button class="b--red ba br2 bw1 f5 ff3 fw7 pointer tc tk-din-2014 tracked ttu   f4-ns   bw2-l" href="/" id="video-gallery-button">Video Gallery</button>
-            </div>
-        </div>
-    </div>
+    {% include show_more_button.html %}
 </main>
