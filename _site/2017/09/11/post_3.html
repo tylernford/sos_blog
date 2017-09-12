@@ -24,7 +24,7 @@
 		<!--[if IE]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-	</head>
+	<script src="http://127.0.0.1:35729/livereload.js"></script></head>
 	<body class="tk-din-2014">
         <nav class="bg-white fixed shadow-4 top-0 w-100 z-2" >
     <!-- BEGIN HAMBURGER MENU -->
@@ -190,19 +190,38 @@
         <style>
 .mw-53_5{max-width:57.5rem}
 
-.css-category-list > .css-current-category{
+.css-current-category{
     color:#6c302a;
-    border-bottom:0.125rem solid;
+    /*border-bottom:0.125rem solid;*/
 }
+.css-current-category:after{
+    background-color: #6c302a;
+    border-radius: .0625rem;
+    content: "";
+    float: left;
+    height: .125rem;
+    width: 99%;
+}
+/*
+ :hover, a:focus {
+    border-bottom: 4px solid #eb6d32;
+}*/
+
 @media screen and (min-width:30em) {
     .mb-12-ns {margin-bottom:.75rem}
+    .css-current-category:after{
+        border-radius: .09375rem;
+        height: .1875rem;
+    }
 }
 @media screen and (min-width:60em) {
     .mb-6-l{margin-bottom:6rem}
-    .css-category-list > .css-current-category{
-        border-bottom:0.1875rem solid;
+    .css-current-category:after{
+        border-radius: .125rem;
+        height: .25rem;
     }
 }
+
 </style>
 <div class="center f6 flex flex-wrap fw7 justify-around lh-title mw-53_5 red tracked ttu   mb4 f4-ns mb5-ns   f3-l mb-6-l   css-category-list">
     <a class="db link mb2 mh1 mt0 nowrap red   mb-12-ns mh3-ns   css-current-category" href="">All Articles</a>
