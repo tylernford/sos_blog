@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<main class="bg-putty css-main">
+    <header>
+        <p class="f6 fw7 lh-title mt1 pt5 red tc tracked ttu   f5-ns   f4-l mb2-l pb1-l pt-6_4-l">Category</p>
+        <h1 class="darkest-red f3 fw8 mv0 lh-title ph3 tc ttu   f2-ns ph4-ns   f1-l ph0-l" style="letter-spacing:.04166666667em">Title of Blog Post Here</h1>
+        <p class="c-mid-gray f6 mb4 tc   f5-ns   f4-l">08.19.17</p>
+        {% include social.html %}
+        <!-- Featured image -->
+        <img class="db nt2 w-100" src="assets/post_images/image_1.jpg">
+    </header>
+    <div class="nested-content nested-headline-line-height">
+        <!--<div class="css-full-width-image">
+            <img src="assets/post_images/image_1.jpg">
+        </div>-->
+        <h3>H3 Heading Here</h3>
+        <p>Before we move onto what has changed in this week's two patches, I want to briefly talk about the reports of cheating within our game. Before we moved to early access, our core focus was on adding all the needed systems into the game. Now that this is mostly complete, we are focused on optimizing performance, and increasing security to ensure everyone plays fair.</p>
+        <p>This is not a simple task, as tackling cheaters is a constant battle, but we are confident that over the coming weeks and months we can implement new measures to make it harder to cheat in the game. This week alone we closed two major holes that allowed current cheats access to the game, and as we move further through Early Access we will continue to track down and further secure the game from those that don't want to play fair.</p>
+        <p>As with all games, talk of cheating is discouraged and will be removed from our public facing community forums, not to try to hide it from players, but rather to ensure that those that cheat get no exposure to the public, which is something most of them desire! We hope you understand this point, and bear with us as we work to clean up the game.</p>
+        <div class="css-centered-image">
+            <img src="assets/post_images/image_2.jpg">
+            <p class="">Caption here if needed, if not no text or card will appear below image.</p>
+        </div>
+        <h3>Another H3 Heading That's More Wordy, Etc.</h3>
+        <p>Finally, in case you missed our announcement on Twitter, we have identified the cause of lag seen on the servers lately and are working on getting it resolved. This issue is not an easy fix, as it involves changes to the core engine code, and will take us some time to complete. We have no ETA on when this will be resolved just yet, so we ask for your patience while we fix the problem.</p>
+        <p>Now onto what we have updated. These patch notes cover both updates pushed during this week.</p>
+        <div class="css-full-width-image">
+            <img src="assets/post_images/image_3.jpg" style="margin-top:62px">
+            <p class="">Caption here if needed, if not no text or card will appear below image.</p>
+        </div>
+        <h3>Another H3 Heading That's More Wordy, Etc.</h3>
+        <p>Finally, in case you missed our announcement on Twitter, we have identified the cause of lag seen on the servers lately and are working on getting it resolved. This issue is not an easy fix, as it involves changes to the core engine code, and will take us some time to complete. We have no ETA on when this will be resolved just yet, so we ask for your patience while we fix the problem.</p>
+        <p>Now onto what we have updated. These patch notes cover both updates pushed during this week.</p>
+
+        <div class="css-notification">
+            <p>This patch will be deployed for both clients and servers Thursday, April 13, 5PM KST/1AM PDT/8AM UTC and is expected to take approx. 1 hour to complete.</p>
+        </div>
+
+        <h4>Config Changes</h3>
+        <ul>
+            <li>Fixed configuration files (ini) so that it cannot be used to hide trees, grass, etc.</li>
+            <li>Prevented adjusting the FOV by changing the game settings file (ini).</li>
+            <li>FOV will be adjustable from the settings menu in-game in a future update.</li>
+        </ul>
+        <h4>Bug Fixes</h3>
+        <ul>
+            <li>Fixed configuration files (ini) so that it cannot be used to hide trees, grass, etc.</li>
+            <li>Prevented adjusting the FOV by changing the game settings file (ini).</li>
+            <li>FOV will be adjustable from the settings menu in-game in a future update.</li>
+        </ul>
+        <h4>Sound</h3>
+        <ul>
+            <li>Fixed configuration files (ini) so that it cannot be used to hide trees, grass, etc.</li>
+            <li>Prevented adjusting the FOV by changing the game settings file (ini).</li>
+            <li>FOV will be adjustable from the settings menu in-game in a future update.</li>
+        </ul>
+        <div class="video-wrapper">
+            <div class="embed-container">
+                <iframe class="z-0" src='https://www.youtube.com/embed/46lp_xa7pos' frameborder='0' allowfullscreen></iframe>
+            </div>
+        </div>
+        <h3>Another H3 Heading That's More Wordy, Etc.</h3>
+        <p>Finally, in case you missed our announcement on Twitter, we have identified the cause of lag seen on the servers lately and are working on getting it resolved. This issue is not an easy fix, as it involves changes to the core engine code, and will take us some time to complete. We have no ETA on when this will be resolved just yet, so we ask for your patience while we fix the problem.</p>
+        <p>Now onto what we have updated. These patch notes cover both updates pushed during this week.</p>
+    </div>
+
+
+    {% include divider.html %}
+
+
+    <div class="center ph3   ph4-ns   ph5-l css-related-posts">
+        <h5 class="dark-red f4 fw7 lh-title tc tracked ttu">Related Posts</h5>
+        <div class="center flex flex-wrap justify-between mw-72_5">
+            {% for post in page.posts %}
+            <div class="css-post-card-outer">
+                <a class="bg-white db link near-black shadow-6-hover   css-post-card-inner" href="/">
+                    <img class="db w-100" src="{{ post.image }}" />
+                    <div class="ph3">
+                        <p class="f7 fw8 lh-solid mb2 mt3 ph2@45 pt2 red tracked-narrow ttu   f6@45">Topic Here</p>
+                        <h1 class="f5 fw7 lh-title mt0 ph2@45 tracked-narrow ttu   f4@45">Blog Title Here and Then Break to New Line</h1>
+                        <p class="f6 fw4 gray lh-title mb4 ph2@45">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
+                        <p class="f6 fw4 lh-solid light-silver mb0 pb-1_5 ph2@45 tr ttu">08.19.17</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+            <!-- begin sad hack for grid -->
+            <div class="css-post-card-outer"></div>
+            <div class="css-post-card-outer"></div>
+            <!-- end sad hack for grid -->
+        </div>
+    </div>
+</main>

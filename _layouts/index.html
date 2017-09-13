@@ -2,77 +2,11 @@
 layout: default
 ---
 
-<style>
-.bg-putty{background-color:#FAF8F5}
-.nearf-black{color:#0B0704}
-
-
-.bg-center{background-position: center}
-.f-18{font-size:1.125rem}
-.mb-3_75{margin-bottom:3.75rem}
-.mw-72_5{max-width:72.5rem}
-.pb-1_5{padding-bottom:1.5rem}
-.pb-60{padding-bottom:3.75rem}
-.shadow-6-hover:hover{
-  -webkit-box-shadow: 0px 4px 25px 2px rgba(0,0,0,.3);
-  box-shadow:         0px 4px 25px 2px rgba(0,0,0,.3);
-}
-.top-5{top:5rem}
-
-.css-main {padding-top:60px}
-#css-map-background {
-    background-image: url('../assets/map-background-ns.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size:cover;
-    height:750px
-}
-@media screen and (min-width:30em) {
-    .f-18-ns{font-size:1.125rem}
-}
-@media screen and (min-width:60em) {
-    #css-map-background {
-        background-image: url('../assets/map-background-l.png');
-    	background-repeat: no-repeat;
-    	background-position: top center;
-        background-size:cover;
-        height:1500px
-    }
-}
-@media screen and (min-width:120em) {
-    #css-map-background {
-        background-image: url('../assets/map-background-xl.png');
-    }
-}
-.css-post-card-wrapper {padding-top:4rem}
-.css-post-card-inner {margin-top:2rem}
-@media screen and (min-width:30em) {
-    .css-post-card-outer {width:47.68518518518518%}
-    .css-post-card-inner {margin-top:9.70873786407767%}
-}
-@media screen and (min-width:45.5em) {
-    .f4\@45{font-size:1.25rem}
-    .f6\@45{font-size:.875rem}
-    .flex\@45{display:-webkit-box;display:-ms-flexbox;display:flex}
-    .h-auto\@45{height:auto}
-    .mw-35\@45{max-width:35rem}
-    .ph2\@45{padding-left:.5rem;padding-right:.5rem}
-    .ph4\@45{padding-left:2rem;padding-right:2rem}
-}
-@media screen and (min-width:45.5em) and (max-width:60em) {
-    .f3\@45-60{font-size:1.5rem}
-}
-@media screen and (min-width:60em) {
-    .css-post-card-wrapper {padding-top:6.4375rem}
-    .css-post-card-outer {width:31.03448275862069%}
-    .css-post-card-inner{margin-top:11.11111111111111%;}
-}
-</style>
 <div class="absolute top-5 w-100 z-0" id="css-map-background">
 </div>
 <main class="bg-putty pb-60 ph3   ph4-ns   ph5-l   css-main">
-    <div class="center mb-3_75 mw-72_5 relative z-1   css-post-card-wrapper">
-        <h1 class="f2 fw8 gold mb3 mt0 pv0 lh-title tc tracked-narrow ttu   f1-ns mb4-ns   mb5-l">News</h1>
+    <div class="center mb-3_75 mw-72_5 relative z-1">
+        <h1 class="f2 fw8 gold lh-title mb3 mt0 pt5 tc tracked-narrow ttu   f1-ns mb4-ns   mb5-l pt-6_4-l">News</h1>
         <!-- Messing Around with Tag Sorting --
         <div class="center f4 flex flex-wrap fw7 justify-around lh-title mw-53_5 red tracked ttu   f3-ns   css-category-list" style="margin-bottom:6rem">
             {% assign sorted_tags = site.tags | sort %}
@@ -95,10 +29,10 @@ layout: default
                 <a class="bg-white db link near-black shadow-6-hover   css-post-card-inner" href="/">
                     <img class="db w-100" src="{{ post.image }}" />
                     <div class="ph3">
-                        <p class="f7 fw8 lh-solid mb2 mt3 ph2@45 pt2 red tracked-narrow ttu   f6@45">Topic Here</p>
-                        <h1 class="f5 fw7 lh-title mt0 ph2@45 tracked-narrow ttu   f4@45">Blog Title Here and Then Break to New Line</h1>
-                        <p class="f6 fw4 gray lh-title mb4 ph2@45">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
-                        <p class="f6 fw4 lh-solid light-silver mb0 pb-1_5 ph2@45 tr ttu">08.19.17</p>
+                        <p class="f7 fw8 lh-solid mb2 mt3 pt2 red tracked-narrow ttu   f6@45 ph2@45">Topic Here</p>
+                        <h1 class="f5 fw7 lh-title mt0 tracked-narrow ttu   f4@45 ph2@45">Blog Title Here and Then Break to New Line</h1>
+                        <p class="f6 fw4 gray lh-title mb4   ph2@45">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
+                        <p class="f6 fw4 lh-solid light-silver mb0 pb-1_5 tr ttu   ph2@45">08.19.17</p>
                     </div>
                 </a>
             </div>
