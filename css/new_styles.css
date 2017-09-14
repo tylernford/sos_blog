@@ -29,8 +29,10 @@
 @media screen and (min-width:45.5em) and (max-width:60em) {
     .f3\@45-60{font-size:1.5rem}
 }
-@media screen and (min-width:60em) {
+@media screen and (max-width:60em) {
     .h-3-nl{height:3rem}
+}
+@media screen and (min-width:60em) {
     .mb-6-l{margin-bottom:6rem}
     .pt-6_4-l{padding-top:6.4375rem}
 }
