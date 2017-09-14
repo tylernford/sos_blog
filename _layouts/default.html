@@ -20,6 +20,11 @@
 		<link href="css/post_styles.css" rel="stylesheet">
 		<link href="css/hamburger.css" rel="stylesheet">
 
+		<link rel="stylesheet" href="css/owl.css" />
+		<link rel="stylesheet" href="css/owl.theme.new.css" />
+
+
+
         <script src="https://use.typekit.net/zok1cii.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -34,70 +39,19 @@
 
 		{% include footer.html %}
 	</body>
-
 	<!-- JS Libraries -->
 	<script src="js/jquery-2.1.0.min.js"></script>
-	<script src="js/smooth-scroll.min.js"></script>
-	<script src="js/gumshoe.js"></script>
-	<script src="js/magnific.js"></script>
+	<script src="js/owl.js"></script>
 
 	<!-- Custom JS -->
 	<script src="js/navigation.js"></script>
 	<script>
-		/* Smooth Scroll */
-		smoothScroll.init({
-    		offset: 200
-		});
-		/* Gumeshoe */
-		gumshoe.init({
-			offset: 230
-		});
-
-		/* Image Gallery */
-		$(document).ready(function() {
-			$('.gallery-item').magnificPopup({
-				type: 'image',
-				gallery:{
-					enabled:true
-				}
-			});
-		});
-
-		/* Video Gallery */
-		$(document).ready(function() {
-    		$('.popup-youtube').magnificPopup({
-        		disableOn: 0,
-        		type: 'iframe',
-        		mainClass: 'mfp-fade',
-        		removalDelay: 160,
-        		preloader: false,
-        		fixedContentPos: false,
-				gallery:{
-    				enabled:true
-  				}
-    		});
-		});
-
-		/* Toggle Video Gallery */
-		(function() {
-	        function transformStart() {
-	            document.querySelector("#video-gallery").classList.toggle("show");
-	            document.querySelector("#image-gallery").classList.toggle("show");
-	            document.querySelector("#video-gallery-button").classList.toggle("show");
-	            document.querySelector("#image-gallery-button").classList.toggle("show");
-	        }
-	        document.querySelector("#video-gallery-button").addEventListener("click", transformStart);
-	    })();
-
-		/* Toggle Image Gallery */
-	    (function() {
-	        function transformStart() {
-	            document.querySelector("#video-gallery").classList.toggle("show");
-	            document.querySelector("#image-gallery").classList.toggle("show");
-	            document.querySelector("#video-gallery-button").classList.toggle("show");
-	            document.querySelector("#image-gallery-button").classList.toggle("show");
-	        }
-	        document.querySelector("#image-gallery-button").addEventListener("click", transformStart);
-	    })();
+	$(document).ready(function(){
+		$('.owl-carousel').owlCarousel({
+			items:1,
+			loop:true,
+			autoplay:true
+  		});
+	});
 	</script>
 </html>

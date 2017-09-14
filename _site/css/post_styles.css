@@ -1,3 +1,23 @@
+/* ---- Utilities ---- */
+.darkest-red{color:#471B13}
+.c-mid-gray{color:#5E5B5B}
+.h-1_75{height:1.75rem}
+.w-1_75{width:1.75rem}
+.mw-7_25{max-width:7.25rem}
+.mw-47_5{max-width:47.5rem}
+@media screen and (min-width:30em) {
+    .h-2_5-ns{height:2.5rem}
+    .mw-8_75-ns{max-width:8.75rem}
+    .w-2_5-ns{width:2.5rem}
+}
+/* ---- Utilities ---- */
+
+
+
+
+
+
+
 .nested-content > h3, .nested-content > h4, .nested-content > p, .nested-content > ul {
     margin-left:auto;
     margin-right:auto;
@@ -92,10 +112,7 @@
 /* ---- Centered Image ---- */
 .css-centered-image {
     margin-bottom:/*6rem*/5rem;
-    margin-left:auto;
-    margin-right:auto;
     margin-top:/*76px*/4rem;
-    max-width:47.5rem;
     padding-left:1rem;
     padding-right:1rem;
 }

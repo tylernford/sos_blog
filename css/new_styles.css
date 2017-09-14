@@ -1,57 +1,19 @@
-.darkest-red{color:#471B13}
-.c-mid-gray{color:#5E5B5B}
-.bg-putty{background-color:rgba(250,248,245,1)}
+/* ---- Utilities ---- */
 .bg-center{background-position: center}
-.f-18{font-size:1.125rem}
-.h-1_75{height:1.75rem}
+.bg-putty{background-color:rgba(250,248,245,1)}
 .mb-3_75{margin-bottom:3.75rem}
-.mw-8_75{max-width:8.75rem}
+.mw-53_5{max-width:57.5rem}
 .mw-72_5{max-width:72.5rem}
 .pb-1_5{padding-bottom:1.5rem}
-.pb-60{padding-bottom:3.75rem}
+.pb-3_75{padding-bottom:3.75rem}
 .shadow-6-hover:hover{
   -webkit-box-shadow: 0px 4px 25px 2px rgba(0,0,0,.3);
   box-shadow:         0px 4px 25px 2px rgba(0,0,0,.3);
 }
 .top-5{top:5rem}
-.tracked-_125{letter-spacing:.125rem}
-.w-1_75{width:1.75rem}
-
-.css-main {padding-top:60px}
-#css-map-background {
-    background-image: url('../assets/map-background-ns.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size:cover;
-    height:750px
-}
-.css-share-buttons {max-width:116px}
 @media screen and (min-width:30em) {
     .f-18-ns{font-size:1.125rem}
-    .h-2_5-ns{height:2.5rem}
-    .w-2_5-ns{width:2.5rem}
-
-    .css-share-buttons {max-width:8.75rem}
-}
-@media screen and (min-width:60em) {
-    .pt-6_4-l{padding-top:6.4375rem}
-    #css-map-background {
-        background-image: url('../assets/map-background-l.png');
-    	background-repeat: no-repeat;
-    	background-position: top center;
-        background-size:cover;
-        height:1500px
-    }
-}
-@media screen and (min-width:120em) {
-    #css-map-background {
-        background-image: url('../assets/map-background-xl.png');
-    }
-}
-.css-post-card-inner {margin-top:2rem}
-@media screen and (min-width:30em) {
-    .css-post-card-outer {width:47.68518518518518%}
-    .css-post-card-inner {margin-top:9.70873786407767%}
+    .mb-12-ns {margin-bottom:.75rem}
 }
 @media screen and (min-width:45.5em) {
     .f4\@45{font-size:1.25rem}
@@ -66,6 +28,59 @@
     .f3\@45-60{font-size:1.5rem}
 }
 @media screen and (min-width:60em) {
+    .mb-6-l{margin-bottom:6rem}
+    .pt-6_4-l{padding-top:6.4375rem}
+}
+/* ---- Utilities ---- */
+
+
+
+
+/* ---- Non-Utilities ---- */
+#css-blog-index-background {
+    background-image: url('../assets/map-background-ns.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:cover;
+    height:750px
+}
+.css-blog-main {padding-top:60px}
+.css-post-card-inner {margin-top:2rem}
+.css-current-category{color:#6c302a}
+.css-current-category:after{
+    background-color: #6c302a;
+    border-radius: .0625rem;
+    content: "";
+    float: left;
+    height: .125rem;
+    width: 99%;
+}
+@media screen and (min-width:30em) {
+    .css-current-category:after{
+        border-radius: .09375rem;
+        height: .1875rem;
+    }
+    .css-post-card-outer {width:47.68518518518518%}
+    .css-post-card-inner {margin-top:9.70873786407767%}
+}
+@media screen and (min-width:60em) {
+    #css-blog-index-background {
+        background-image: url('../assets/map-background-l.png');
+    	background-repeat: no-repeat;
+    	background-position: top center;
+        background-size:cover;
+        height:1500px
+    }
+    .css-current-category:after{
+        border-radius: .125rem;
+        height: .25rem;
+    }
     .css-post-card-outer {width:31.03448275862069%}
     .css-post-card-inner{margin-top:11.11111111111111%;}
 }
+@media screen and (min-width:120em) {
+    #css-blog-index-background {
+        background-image: url('../assets/map-background-xl.png');
+    }
+}
+/* ---- Non-Utilities ---- */

@@ -2,21 +2,11 @@
 layout: default
 ---
 
-<div class="absolute top-5 w-100 z-0" id="css-map-background">
+<div class="absolute top-5 w-100 z-0" id="css-blog-index-background">
 </div>
-<main class="bg-putty pb-60 ph3   ph4-ns   ph5-l   css-main">
+<main class="bg-putty pb-3_75 ph3   ph4-ns   ph5-l   css-blog-main">
     <div class="center mb-3_75 mw-72_5 relative z-1">
         <h1 class="f2 fw8 gold lh-title mb3 mt0 pt5 tc tracked-narrow ttu   f1-ns mb4-ns   mb5-l pt-6_4-l">News</h1>
-        <!-- Messing Around with Tag Sorting --
-        <div class="center f4 flex flex-wrap fw7 justify-around lh-title mw-53_5 red tracked ttu   f3-ns   css-category-list" style="margin-bottom:6rem">
-            {% assign sorted_tags = site.tags | sort %}
-            {% for tag in sorted_tags %}
-              {% assign t = tag | first %}
-              {% assign posts = tag | last %}
-              <a class="db link mt0 nowrap red   mb2-l mh3-l" href="">{{ t }}</a>
-            {% endfor %}
-        </div>
-        <!-- Messing Around with Tag Sorting -->
 
         {% include category_list.html %}
 

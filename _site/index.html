@@ -20,6 +20,11 @@
 		<link href="css/post_styles.css" rel="stylesheet">
 		<link href="css/hamburger.css" rel="stylesheet">
 
+		<link rel="stylesheet" href="css/owl.css" />
+		<link rel="stylesheet" href="css/owl.theme.new.css" />
+
+
+
         <script src="https://use.typekit.net/zok1cii.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -105,63 +110,13 @@
 </nav>
 
 
-		<div class="absolute top-5 w-100 z-0" id="css-map-background">
+		<div class="absolute top-5 w-100 z-0" id="css-blog-index-background">
 </div>
-<main class="bg-putty pb-60 ph3   ph4-ns   ph5-l   css-main">
+<main class="bg-putty pb-3_75 ph3   ph4-ns   ph5-l   css-blog-main">
     <div class="center mb-3_75 mw-72_5 relative z-1">
         <h1 class="f2 fw8 gold lh-title mb3 mt0 pt5 tc tracked-narrow ttu   f1-ns mb4-ns   mb5-l pt-6_4-l">News</h1>
-        <!-- Messing Around with Tag Sorting --
-        <div class="center f4 flex flex-wrap fw7 justify-around lh-title mw-53_5 red tracked ttu   f3-ns   css-category-list" style="margin-bottom:6rem">
-            
-            
-              
-              
-              <a class="db link mt0 nowrap red   mb2-l mh3-l" href="">another_category</a>
-            
-              
-              
-              <a class="db link mt0 nowrap red   mb2-l mh3-l" href="">category</a>
-            
-        </div>
-        <!-- Messing Around with Tag Sorting -->
 
-        <style>
-.mw-53_5{max-width:57.5rem}
-
-.css-current-category{
-    color:#6c302a;
-    /*border-bottom:0.125rem solid;*/
-}
-.css-current-category:after{
-    background-color: #6c302a;
-    border-radius: .0625rem;
-    content: "";
-    float: left;
-    height: .125rem;
-    width: 99%;
-}
-/*
- :hover, a:focus {
-    border-bottom: 4px solid #eb6d32;
-}*/
-
-@media screen and (min-width:30em) {
-    .mb-12-ns {margin-bottom:.75rem}
-    .css-current-category:after{
-        border-radius: .09375rem;
-        height: .1875rem;
-    }
-}
-@media screen and (min-width:60em) {
-    .mb-6-l{margin-bottom:6rem}
-    .css-current-category:after{
-        border-radius: .125rem;
-        height: .25rem;
-    }
-}
-
-</style>
-<div class="center f6 flex flex-wrap fw7 justify-around lh-title mw-53_5 red tracked ttu   mb4 f4-ns mb5-ns   f3-l mb-6-l   css-category-list">
+        <div class="center f6 flex flex-wrap fw7 justify-around lh-title mw-53_5 red tracked ttu   mb4 f4-ns mb5-ns   f3-l mb-6-l   css-category-list">
     <a class="db link mb2 mh1 mt0 nowrap red   mb-12-ns mh3-ns   css-current-category" href="">All Articles</a>
     <a class="db link mb2 mh1 mt0 nowrap red   mb-12-ns mh3-ns" href="">Category</a>
     <a class="db link mb2 mh1 mt0 nowrap red   mb-12-ns mh3-ns" href="">Another Cat</a>
@@ -375,70 +330,19 @@
 </footer>
 
 	</body>
-
 	<!-- JS Libraries -->
 	<script src="js/jquery-2.1.0.min.js"></script>
-	<script src="js/smooth-scroll.min.js"></script>
-	<script src="js/gumshoe.js"></script>
-	<script src="js/magnific.js"></script>
+	<script src="js/owl.js"></script>
 
 	<!-- Custom JS -->
 	<script src="js/navigation.js"></script>
 	<script>
-		/* Smooth Scroll */
-		smoothScroll.init({
-    		offset: 200
-		});
-		/* Gumeshoe */
-		gumshoe.init({
-			offset: 230
-		});
-
-		/* Image Gallery */
-		$(document).ready(function() {
-			$('.gallery-item').magnificPopup({
-				type: 'image',
-				gallery:{
-					enabled:true
-				}
-			});
-		});
-
-		/* Video Gallery */
-		$(document).ready(function() {
-    		$('.popup-youtube').magnificPopup({
-        		disableOn: 0,
-        		type: 'iframe',
-        		mainClass: 'mfp-fade',
-        		removalDelay: 160,
-        		preloader: false,
-        		fixedContentPos: false,
-				gallery:{
-    				enabled:true
-  				}
-    		});
-		});
-
-		/* Toggle Video Gallery */
-		(function() {
-	        function transformStart() {
-	            document.querySelector("#video-gallery").classList.toggle("show");
-	            document.querySelector("#image-gallery").classList.toggle("show");
-	            document.querySelector("#video-gallery-button").classList.toggle("show");
-	            document.querySelector("#image-gallery-button").classList.toggle("show");
-	        }
-	        document.querySelector("#video-gallery-button").addEventListener("click", transformStart);
-	    })();
-
-		/* Toggle Image Gallery */
-	    (function() {
-	        function transformStart() {
-	            document.querySelector("#video-gallery").classList.toggle("show");
-	            document.querySelector("#image-gallery").classList.toggle("show");
-	            document.querySelector("#video-gallery-button").classList.toggle("show");
-	            document.querySelector("#image-gallery-button").classList.toggle("show");
-	        }
-	        document.querySelector("#image-gallery-button").addEventListener("click", transformStart);
-	    })();
+	$(document).ready(function(){
+		$('.owl-carousel').owlCarousel({
+			items:1,
+			loop:true,
+			autoplay:true
+  		});
+	});
 	</script>
 </html>

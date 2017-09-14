@@ -20,6 +20,11 @@
 		<link href="css/post_styles.css" rel="stylesheet">
 		<link href="css/hamburger.css" rel="stylesheet">
 
+		<link rel="stylesheet" href="css/owl.css" />
+		<link rel="stylesheet" href="css/owl.theme.new.css" />
+
+
+
         <script src="https://use.typekit.net/zok1cii.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -105,12 +110,12 @@
 </nav>
 
 
-		<main class="bg-putty css-main">
+		<main class="bg-putty css-blog-main">
     <header>
         <p class="f6 fw7 lh-title mt1 pt5 red tc tracked ttu   f5-ns   f4-l mb2-l pb1-l pt-6_4-l">Category</p>
         <h1 class="darkest-red f3 fw8 mv0 lh-title ph3 tc ttu   f2-ns ph4-ns   f1-l ph0-l" style="letter-spacing:.04166666667em">Title of Blog Post Here</h1>
         <p class="c-mid-gray f6 mb4 tc   f5-ns   f4-l">08.19.17</p>
-        <div class="center flex justify-between mb5   css-share-buttons">
+        <div class="center flex justify-between mb5 mw-7_25   mw-8_75-ns">
     <!-- Facebook Share-->
     <a class="grow h-1_5 link w-1_5   h-2_5-ns w-2_5-ns" href="https://facebook.com">
         <svg class="h-1_75 w-1_75   h-2_5-ns w-2_5-ns" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
@@ -151,17 +156,26 @@
         <p>Before we move onto what has changed in this week's two patches, I want to briefly talk about the reports of cheating within our game. Before we moved to early access, our core focus was on adding all the needed systems into the game. Now that this is mostly complete, we are focused on optimizing performance, and increasing security to ensure everyone plays fair.</p>
         <p>This is not a simple task, as tackling cheaters is a constant battle, but we are confident that over the coming weeks and months we can implement new measures to make it harder to cheat in the game. This week alone we closed two major holes that allowed current cheats access to the game, and as we move further through Early Access we will continue to track down and further secure the game from those that don't want to play fair.</p>
         <p>As with all games, talk of cheating is discouraged and will be removed from our public facing community forums, not to try to hide it from players, but rather to ensure that those that cheat get no exposure to the public, which is something most of them desire! We hope you understand this point, and bear with us as we work to clean up the game.</p>
-        <div class="css-centered-image">
+        <div class="center mw-47_5   css-centered-image">
             <img src="assets/post_images/image_2.jpg">
             <p class="">Caption here if needed, if not no text or card will appear below image.</p>
         </div>
         <h3>Another H3 Heading That's More Wordy, Etc.</h3>
         <p>Finally, in case you missed our announcement on Twitter, we have identified the cause of lag seen on the servers lately and are working on getting it resolved. This issue is not an easy fix, as it involves changes to the core engine code, and will take us some time to complete. We have no ETA on when this will be resolved just yet, so we ask for your patience while we fix the problem.</p>
         <p>Now onto what we have updated. These patch notes cover both updates pushed during this week.</p>
-        <div class="css-full-width-image">
-            <img src="assets/post_images/image_3.jpg" style="margin-top:62px">
-            <p class="">Caption here if needed, if not no text or card will appear below image.</p>
+
+        <div class="loop css-full-width-image">
+        <div class="owl-carousel owl-theme">
+            <img src="assets/post_images/image_1.jpg">
+            <img src="assets/post_images/image_3.jpg">
+            <img src="assets/post_images/image_1.jpg">
+            <img src="assets/post_images/image_3.jpg">
+            <img src="assets/post_images/image_1.jpg">
         </div>
+        <p class="">Caption here if needed, if not no text or card will appear below image.</p>
+    </div>
+
+
         <h3>Another H3 Heading That's More Wordy, Etc.</h3>
         <p>Finally, in case you missed our announcement on Twitter, we have identified the cause of lag seen on the servers lately and are working on getting it resolved. This issue is not an easy fix, as it involves changes to the core engine code, and will take us some time to complete. We have no ETA on when this will be resolved just yet, so we ask for your patience while we fix the problem.</p>
         <p>Now onto what we have updated. These patch notes cover both updates pushed during this week.</p>
@@ -331,70 +345,19 @@
 </footer>
 
 	</body>
-
 	<!-- JS Libraries -->
 	<script src="js/jquery-2.1.0.min.js"></script>
-	<script src="js/smooth-scroll.min.js"></script>
-	<script src="js/gumshoe.js"></script>
-	<script src="js/magnific.js"></script>
+	<script src="js/owl.js"></script>
 
 	<!-- Custom JS -->
 	<script src="js/navigation.js"></script>
 	<script>
-		/* Smooth Scroll */
-		smoothScroll.init({
-    		offset: 200
-		});
-		/* Gumeshoe */
-		gumshoe.init({
-			offset: 230
-		});
-
-		/* Image Gallery */
-		$(document).ready(function() {
-			$('.gallery-item').magnificPopup({
-				type: 'image',
-				gallery:{
-					enabled:true
-				}
-			});
-		});
-
-		/* Video Gallery */
-		$(document).ready(function() {
-    		$('.popup-youtube').magnificPopup({
-        		disableOn: 0,
-        		type: 'iframe',
-        		mainClass: 'mfp-fade',
-        		removalDelay: 160,
-        		preloader: false,
-        		fixedContentPos: false,
-				gallery:{
-    				enabled:true
-  				}
-    		});
-		});
-
-		/* Toggle Video Gallery */
-		(function() {
-	        function transformStart() {
-	            document.querySelector("#video-gallery").classList.toggle("show");
-	            document.querySelector("#image-gallery").classList.toggle("show");
-	            document.querySelector("#video-gallery-button").classList.toggle("show");
-	            document.querySelector("#image-gallery-button").classList.toggle("show");
-	        }
-	        document.querySelector("#video-gallery-button").addEventListener("click", transformStart);
-	    })();
-
-		/* Toggle Image Gallery */
-	    (function() {
-	        function transformStart() {
-	            document.querySelector("#video-gallery").classList.toggle("show");
-	            document.querySelector("#image-gallery").classList.toggle("show");
-	            document.querySelector("#video-gallery-button").classList.toggle("show");
-	            document.querySelector("#image-gallery-button").classList.toggle("show");
-	        }
-	        document.querySelector("#image-gallery-button").addEventListener("click", transformStart);
-	    })();
+	$(document).ready(function(){
+		$('.owl-carousel').owlCarousel({
+			items:1,
+			loop:true,
+			autoplay:true
+  		});
+	});
 	</script>
 </html>
