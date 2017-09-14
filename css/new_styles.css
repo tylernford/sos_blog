@@ -1,6 +1,8 @@
 /* ---- Utilities ---- */
 .bg-center{background-position: center}
 .bg-putty{background-color:rgba(250,248,245,1)}
+.hover-bg-red:hover, .hover-bg-red:focus { background-color:#c64c34 }
+.hover-putty:hover, .hover-putty:focus {color:#FAF8F5}
 .mb-3_75{margin-bottom:3.75rem}
 .mw-53_5{max-width:57.5rem}
 .mw-72_5{max-width:72.5rem}
@@ -28,6 +30,7 @@
     .f3\@45-60{font-size:1.5rem}
 }
 @media screen and (min-width:60em) {
+    .h-3-nl{height:3rem}
     .mb-6-l{margin-bottom:6rem}
     .pt-6_4-l{padding-top:6.4375rem}
 }
