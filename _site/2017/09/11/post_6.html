@@ -22,6 +22,8 @@
 
 		<link rel="stylesheet" href="css/owl.css" />
 		<link rel="stylesheet" href="css/owl.theme.new.css" />
+		<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+
 
 
 
@@ -43,7 +45,7 @@
     <!-- END HAMBURGER MENU -->
 
     <!-- SOS Logo --->
-    <a class="db absolute center top-0 right-0 bottom-0 left-0" style="width:127px;height:39px;margin-top:.66rem;backface-visibility: hidden;" href="">
+    <a class="db absolute center top-0 right-0 bottom-0 left-0" style="width:127px;height:39px;margin-top:.66rem;backface-visibility: hidden;" href="https://undertaker-computer-62877.netlify.com/">
         <img class="db" style="width:127px;height:39px;backface-visibility: hidden;" src="assets/logos/sos_logo.svg" />
     </a>
     <!-- End SOS Logo --->
@@ -52,7 +54,7 @@
     <a class="dn b--light-silver ba br2 bw1 f6 fw7 silver hover-bg-light-silver hover-white no-underline ph3 tc tracked-narrow ttu
 
     absolute top-0 right-0 dn-xl mr3  db-ns mr4-ns" style="height:2.125rem;
-    padding-top:.5rem; margin-top:13px;backface-visibility: hidden;" href="/">Log In</a>
+    padding-top:.5rem; margin-top:13px;backface-visibility: hidden;" href="">Log In</a>
     <!-- Mobile Login Button -->
 
 
@@ -154,7 +156,7 @@
 }
 </style>
 
-<button class="b--red ba bg-putty br2 bw1 center db f5 fw7 h-3-nl hover-bg-red hover-putty lh-title pointer red tc tk-din-2014 tracked ttu w-100   f-18-ns pt1-ns   mw-35@45   bw2-l h3-l">See More Articles</button>
+<button class="b--red ba bg-putty br2 bw1 center db f5 fw7 h-3-nl hover-bg-red hover-putty lh-title pointer red tc tk-din-2014 tracked ttu w-100   f-18-ns pt1-ns   mw-35@45   bw2-l h3-l     load-next-button">See More Articles</button>
 
 </main>
 
@@ -228,6 +230,81 @@
 
 	<!-- Custom JS -->
 	<script src="js/navigation.js"></script>
+	<script>
+	var infScroll = new InfiniteScroll( '.container', {
+  // defaults listed
+
+  path: '.pagination__next',
+  // REQUIRED. Determines the URL for the next page
+  // Set to selector string to use the href of the next page's link
+  // path: '.pagination__next'
+  // Or set with  in place of the page number in the url
+  // path: '/blog/page/'
+  // or set with function
+  // path: function() {
+  //   return return '/articles/P' + ( ( this.loadCount + 1 ) * 10 );
+  // }
+   append: '.post',
+  // REQUIRED for appending content
+  // Appends selected elements from loaded page to the container
+
+  checkLastPage: true,
+  // Checks if page has path selector element
+  // Set to string if path is not set as selector string:
+  //   checkLastPage: '.pagination__next'
+
+  prefill: false,
+  // Loads and appends pages on intialization until scroll requirement is met.
+
+  responseType: 'document',
+  // Sets the type of response returned by the page request.
+  // Set to 'text' to return flat text for loading JSON.
+
+  outlayer: false,
+  // Integrates Masonry, Isotope or Packery
+  // Appended items will be added to the layout
+
+  scrollThreshold: 400,
+  // Sets the distance between the viewport to scroll area
+  // for scrollThreshold event to be triggered.
+
+  elementScroll: false,
+  // Sets scroller to an element for overflow element scrolling
+
+  loadOnScroll: false,
+  // Loads next page when scroll crosses over scrollThreshold
+
+  history: 'replace',
+  // Changes the browser history and URL.
+  // Set to 'push' to use history.pushState()
+  //    to create new history entries for each page change.
+
+  historyTitle: true,
+  // Updates the window title. Requires history enabled.
+
+hideNav: '.pagination',
+  // Hides navigation element
+
+  status: undefined,
+  // Displays status elements indicating state of page loading:
+  // .infinite-scroll-request, .infinite-scroll-load, .infinite-scroll-error
+  // status: '.page-load-status'
+
+  button: '.load-next-button',
+  // Enables a button to load pages on click
+  // button: '.load-next-button'
+
+  onInit: undefined,
+  // called on initialization
+  // useful for binding events on init
+  // onInit: function() {
+  //   this.on( 'append', function() {...})
+  // }
+
+  debug: false,
+  // Logs events and state changes to the console.
+})
+	</script>
 	<script>
 	$(document).ready(function(){
 		$('.owl-carousel').owlCarousel({

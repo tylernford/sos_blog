@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="absolute top-5 w-100 z-0" id="css-blog-index-background">
+</div>
+<main class="bg-putty pb-3_75 ph3   ph4-ns   ph5-l   css-blog-main">
+    <div class="center mb-3_75 mw-72_5 relative z-1">
+        <h1 class="f2 fw8 gold lh-title mb3 mt0 pt5 tc tracked-narrow ttu   f1-ns mb4-ns   mb5-l pt-6_4-l">News</h1>
+
+        {% include category_list.html %}
+
+        <!-- List of Post Cards -->
+        <div class="flex flex-wrap justify-between   container" id="container">
+            {% for post in page.posts %}
+            <div class="css-post-card-outer   post">
+                <a class="bg-white db link near-black shadow-6-hover   css-post-card-inner" href="/">
+                    <img class="db w-100" src="{{ post.image }}" />
+                    <div class="ph3">
+                        <p class="f7 fw8 lh-solid mb2 mt3 pt2 red tracked-narrow ttu   f6@45 ph2@45">Topic Here</p>
+                        <h1 class="f5 fw7 lh-title mt0 tracked-narrow ttu   f4@45 ph2@45">Blog Title Here and Then Break to New Line</h1>
+                        <p class="f6 fw4 gray lh-title mb4   ph2@45">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
+                        <p class="f6 fw4 lh-solid light-silver mb0 pb-1_5 tr ttu   ph2@45">08.19.17</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <p class="pagination">
+<a class="pagination__next" href="page2.html">Next page</a>
+</p>
+    {% include show_more_button.html %}
+</main>

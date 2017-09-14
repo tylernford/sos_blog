@@ -56,6 +56,11 @@
     width: 99%;
 }
 @media screen and (min-width:30em) {
+    .container:after {
+        content: '';
+        display: block;
+        margin-left: 31.03448275862069%;
+    }
     .css-current-category:after{
         border-radius: .09375rem;
         height: .1875rem;
