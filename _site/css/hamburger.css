@@ -1,7 +1,11 @@
 @media screen and (max-width:70em) {
     #menu-button {
+    -webkit-transition: background 375ms ease-in-out;
     transition: background 375ms ease-in-out;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     width:20px;
     margin-top:20px;
 }
@@ -10,12 +14,19 @@
     position: relative;
     width: 25px;
     height: 20px;
+    -webkit-transition: -webkit-transform 375ms ease-in-out;
+    transition: -webkit-transform 375ms ease-in-out;
     transition: transform 375ms ease-in-out;
+    transition: transform 375ms ease-in-out, -webkit-transform 375ms ease-in-out;
 }
 
 #menu-button:active .hamburger {
+    -webkit-transition: -webkit-transform 50ms;
+    transition: -webkit-transform 50ms;
     transition: transform 50ms;
-    transform: scale(.95);
+    transition: transform 50ms, -webkit-transform 50ms;
+    -webkit-transform: scale(.95);
+            transform: scale(.95);
 }
 
 .hamburger::before, .hamburger::after, .hamburger .inner {
@@ -24,35 +35,47 @@
     width: 25px;
     height: 2px;
     background: #c64c34;
-    transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-transition: all 375ms ease-in-out;
     transition: all 375ms ease-in-out;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 .hamburger::before {
     top: -1px;
 }
 .hamburger .inner {
     top: 9px;
-    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
 }
 .hamburger::after {
     top: 19px;
 }
 .menu-open .hamburger {
-    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
 }
 .menu-open #menu-button:active .hamburger {
-    transform: scale(.95) rotateY(-180deg);
+    -webkit-transform: scale(.95) rotateY(-180deg);
+            transform: scale(.95) rotateY(-180deg);
 }
 .menu-open .hamburger::before {
-    transform: translate3d(-4px, 1px, 0) rotateZ(-45deg);
+    -webkit-transform: translate3d(-4px, 1px, 0) rotateZ(-45deg);
+            transform: translate3d(-4px, 1px, 0) rotateZ(-45deg);
 }
 .menu-open .hamburger .inner {
-    transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+    -webkit-transition: -webkit-transform 375ms;
+    transition: -webkit-transform 375ms;
     transition: transform 375ms;
+    transition: transform 375ms, -webkit-transform 375ms;
 }
 .menu-open .hamburger::after {
-    transform: translate3d(-4px, -1px, 0) rotateZ(45deg);
+    -webkit-transform: translate3d(-4px, -1px, 0) rotateZ(45deg);
+            transform: translate3d(-4px, -1px, 0) rotateZ(45deg);
 }
 
 .nav {
@@ -60,12 +83,19 @@
     transform: translateX(-100%);
 }
 .nav.is-hidden {
+    -webkit-transition: -webkit-transform 375ms;
+    transition: -webkit-transform 375ms;
     transition: transform 375ms;
+    transition: transform 375ms, -webkit-transform 375ms;
 }
 .nav.is-visible {
     -webkit-transform: translateX(0);
     transform: translateX(0);
+    -webkit-transition: -webkit-transform 375ms;
+    transition: -webkit-transform 375ms;
     transition: transform 375ms;
-    backface-visibility: hidden;
+    transition: transform 375ms, -webkit-transform 375ms;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 }

@@ -39,7 +39,7 @@
     .flex-row-reverse-xl{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
     .fw8-xl{font-weight:800}
     .h-100-xl{height:100%}
-    .items-center-xl{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+    .items-center-xl{-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center}
     .justify-between-xl{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
     .mb0-xl{margin-bottom:0}
     .mw-80-xl {max-width:80rem}
@@ -64,7 +64,9 @@ nav {height:3.75rem}
     width:9.56rem
 }
 #social-links a {
-    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     height: 1.1875rem;
     margin-right:1.19rem
 }
@@ -85,7 +87,9 @@ nav {height:3.75rem}
 /* -------- Sign Up & Log In Buttons -------- */
 #account-buttons {width:15.16rem}
 #account-buttons a {
-    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     height:2.5rem;
     padding-top:.625rem;
 }
