@@ -32,10 +32,10 @@
 .tracked-narrow {letter-spacing: .05rem}
 
 /* IE10 Featured Post Width Fixes */
-@media screen and (min-width:0\0) {
-
-        .mw-50-ie {display:none!important}
-    
+@media screen and (min-width:60em) {
+    @media screen and (min-width:0\0) {
+        .dn-ie{display:none!important}
+    }
 }
 /* IE10 Featured Post Width Fixes */
 @media screen and (min-width:30em) {
