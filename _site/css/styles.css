@@ -1,0 +1,448 @@
+/* --------------------------------------------- UTILITIES ---------------------------------------------- */
+.b--red{border-color:#c64c34}
+.bg-center{background-position: center}
+.bg-near-white{background-color:##F7F5F2}
+.bg-putty{background-color:rgba(250,248,245,1)}
+.bg-red { background-color:#c64c34 }
+.bw_1875{border-width:.1875rem}
+.f-_625{font-size:.625rem}
+.f-_8125{font-size:.8125rem}
+.gold {color:#ffa200}
+.h-3_5{height:3.5rem}
+.h-3_75{height:3.75rem}
+.hover-bg-red:hover, .hover-bg-red:focus { background-color:#c64c34 }
+.hover-light-silver:hover{color:#aaa}
+.hover-putty:hover, .hover-putty:focus {color:#FAF8F5}
+.hover-red:hover { color:#c64c34 }
+.mb-3_75{margin-bottom:3.75rem}
+.mw-57_5{max-width:57.5rem}
+.mw-72_5{max-width:72.5rem}
+.mw-80 {max-width:80rem}
+.pb-_6{padding-bottom:.6rem}
+.pb-1_5{padding-bottom:1.5rem}
+.pb-3_75{padding-bottom:3.75rem}
+.pt-3_75{paddig-top:3.75rem}
+.red { color:#c64c34 }
+.shadow-6-hover:hover{
+  -webkit-box-shadow: 0px 4px 25px 2px rgba(0,0,0,.3);
+  box-shadow:         0px 4px 25px 2px rgba(0,0,0,.3);
+  -webkit-transition:box-shadow .3s ease-in-out;-webkit-transition:-webkit-box-shadow .3s ease-in-out;transition:-webkit-box-shadow .3s ease-in-out;transition:box-shadow .3s ease-in-out;transition:box-shadow .3s ease-in-out, -webkit-box-shadow .3s ease-in-out
+}
+.top-5{top:5rem}
+.tracked-narrow {letter-spacing: .05rem}
+@media screen and (min-width:30em) {
+    .bw-_25-ns{border-width:.25rem}
+    .f-1_125-ns{font-size:1.125rem}
+    .h-4_5-ns{height:4.5rem}
+    .mb-_75-ns {margin-bottom:.75rem}
+}
+@media screen and (min-width:45.5em) {
+    .f4\@45{font-size:1.25rem}
+    .f6\@45{font-size:.875rem}
+    .flex\@45{display:-webkit-box;display:-ms-flexbox;display:flex}
+    .h-auto\@45{height:auto}
+    .mw-35\@45{max-width:35rem}
+    .ph2\@45{padding-left:.5rem;padding-right:.5rem}
+    .ph4\@45{padding-left:2rem;padding-right:2rem}
+}
+@media screen and (min-width:45.5em) and (max-width:60em) {
+    .f3\@45-60{font-size:1.5rem}
+}
+@media screen and (min-width:60em) {
+    .mb-6-l{margin-bottom:6rem}
+    .pt-6_4375-l{padding-top:6.4375rem}
+}
+@media screen and (min-width:70em) {
+    .db-xl{display:block}
+    .di-xl{display:inline}
+    .dn-xl{display:none}
+    .f5-xl{font-size:1rem}
+    .flex-xl{display:-webkit-box;display:-ms-flexbox;display:flex}
+    .flex-row-reverse-xl{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+    .fw8-xl{font-weight:800}
+    .h-100-xl{height:100%}
+    .items-center-xl{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+    .justify-between-xl{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+    .mb0-xl{margin-bottom:0}
+    .mw-80-xl {max-width:80rem}
+    .pb0-xl{padding-bottom:0}
+    .static-xl {position:static}
+    .tl-xl {text-align: left}
+}
+/* ------------------------------------------- END UTILITIES -------------------------------------------- */
+
+
+
+
+
+
+
+
+body.overflow-hidden {overflow: hidden}
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+	body {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------ MAIN ------------------------------------------------ */
+/* ------------- Map Background ------------- */
+.css-blog-index-background {
+    background-image: url('../assets/map-background.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:cover;
+    height:750px
+}
+/* ------------ Current Category ------------ */
+.css-current-category{color:#6c302a}
+.css-current-category:after{
+    background-color: #6c302a;
+    border-radius: .0625rem;
+    content: "";
+    float: left;
+    height: .125rem;
+    width: 99%;
+}
+/* --------------- Post Cards --------------- */
+.css-post-card-inner {margin-top:2rem}
+
+@media screen and (min-width:30em) {
+    /* ------------ Current Category ------------ */
+    .css-current-category:after{
+        border-radius: .09375rem;
+        height: .1875rem;
+    }
+    /* --------- Add Phantom Grid Item ---------- */
+    .css-post-card-grid:after {
+        content: '';
+        display: block;
+        margin-left: 31.03448275862069%;
+    }
+    /* --------------- Post Cards --------------- */
+    .css-post-card-outer {width:47.68518518518518%}
+    .css-post-card-inner {margin-top:9.70873786407767%}
+}
+
+@media screen and (min-width:60em) {
+    /* ------------- Map Background ------------- */
+    .css-blog-index-background {
+        background-image: url('../assets/map-background-l.png');
+        height:1500px
+    }
+    /* ------- Current Category Underline ------- */
+    .css-current-category:after{
+        border-radius: .125rem;
+        height: .25rem;
+    }
+    /* --------------- Post Cards --------------- */
+    .css-post-card-outer {width:31.03448275862069%}
+    .css-post-card-inner{margin-top:11.11111111111111%;}
+}
+@media screen and (min-width:120em) {
+    /* ------------- Map Background ------------- */
+    .css-blog-index-background {
+        background-image: url('../assets/map-background-xl.png');
+    }
+}
+/* ---------------------------------------------- END MAIN ---------------------------------------------- */
+
+
+
+
+
+
+
+
+/* ------------------------------------------------ NAV ------------------------------------------------- */
+/* -------------- Social Links -------------- */
+#social-links {
+    margin-top:-.0625rem;
+    width:9.56rem
+}
+#social-links a {
+    flex: 1 0 auto;
+    height: 1.1875rem;
+    margin-right:1.19rem
+}
+#social-links a:nth-child(1) {width:0.5625rem}
+#social-links a:nth-child(2),
+#social-links a:nth-child(3) {width:1rem}
+#social-links a:nth-child(4),
+#social-links a:nth-child(5) {width:1.125rem}
+#social-links a > svg {height: 1.1875rem}
+#social-links a:nth-child(1) > svg {width:0.5625rem}
+#social-links a:nth-child(2) > svg,
+#social-links a:nth-child(3) > svg {width:1rem}
+#social-links a:nth-child(4) > svg,
+#social-links a:nth-child(5) > svg {width:1.125rem}
+/* ------------ End Social Links ------------ */
+
+
+/* -------- Sign Up & Log In Buttons -------- */
+#account-buttons {width:15.16rem}
+#account-buttons a {
+    flex: 1 0 auto;
+    height:2.5rem;
+    padding-top:.625rem;
+}
+#account-buttons a:nth-child(1) {
+    margin-right:.69rem;
+}
+/* ------ End Sign Up & Log In Buttons ------ */
+
+/* ------------ Active Nav Color ------------ */
+.active {color:#aaa}
+/* ---------- End Active Nav Color ---------- */
+
+@media screen and (min-width:70em) {
+    /* ---------------- Page Nav ---------------- */
+    #page-nav {padding-top:.0625rem}
+    #page-nav a {margin-right:1.4rem}
+    /* -------------- End Page Nav -------------- */
+
+    #social-links { margin-right:1.94rem }
+    #account-buttons {width:auto}
+}
+@media screen and (min-width:81em) {
+    /* ---------------- Page Nav ---------------- */
+    #page-nav a {margin-right:1.8125rem}
+    /* -------------- End Page Nav -------------- */
+
+
+    /* -------- Sign Up & Log In Buttons -------- */
+    #account-buttons a:nth-child(1) {width:10.94rem}
+    #account-buttons a:nth-child(2) {width:6.81rem}
+    /* ------ End Sign Up & Log In Buttons ------ */
+}
+
+/* ------------- Hamburger Menu ------------- */
+@media screen and (max-width:70em) {
+    #menu-button {
+        margin-top:20px;
+        -webkit-transition: background 375ms ease-in-out;
+        transition: background 375ms ease-in-out;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        width:20px;
+    }
+    .hamburger {
+        height: 20px;
+        position: relative;
+        -webkit-transition: -webkit-transform 375ms ease-in-out;
+        transition: -webkit-transform 375ms ease-in-out;
+        transition: transform 375ms ease-in-out;
+        transition: transform 375ms ease-in-out, -webkit-transform 375ms ease-in-out;
+        width: 25px;
+    }
+    #menu-button:active .hamburger {
+        -webkit-transform: scale(.95);
+                transform: scale(.95);
+        -webkit-transition: -webkit-transform 50ms;
+        transition: -webkit-transform 50ms;
+        transition: transform 50ms;
+        transition: transform 50ms, -webkit-transform 50ms;
+    }
+    .hamburger::before, .hamburger::after, .hamburger .inner {
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        background: #c64c34;
+        content: '';
+        height: 2px;
+        position: absolute;
+        width: 25px;
+        -webkit-transform-origin: 100% 50%;
+                transform-origin: 100% 50%;
+        -webkit-transition: all 375ms ease-in-out;
+                transition: all 375ms ease-in-out;
+        width: 25px;
+    }
+    .hamburger::before {
+        top: -1px;
+    }
+    .hamburger .inner {
+        top: 9px;
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+    }
+    .hamburger::after {
+        top: 19px;
+    }
+    .menu-open .hamburger {
+        -webkit-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+    }
+    .menu-open #menu-button:active .hamburger {
+        -webkit-transform: scale(.95) rotateY(-180deg);
+                transform: scale(.95) rotateY(-180deg);
+    }
+    .menu-open .hamburger::before {
+        -webkit-transform: translate3d(-4px, 1px, 0) rotateZ(-45deg);
+                transform: translate3d(-4px, 1px, 0) rotateZ(-45deg);
+    }
+    .menu-open .hamburger .inner {
+        -webkit-transform: rotateY(-90deg);
+                transform: rotateY(-90deg);
+        -webkit-transition: -webkit-transform 375ms;
+        transition: -webkit-transform 375ms;
+        transition: transform 375ms;
+        transition: transform 375ms, -webkit-transform 375ms;
+    }
+    .menu-open .hamburger::after {
+        -webkit-transform: translate3d(-4px, -1px, 0) rotateZ(45deg);
+                transform: translate3d(-4px, -1px, 0) rotateZ(45deg);
+    }
+    .nav {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    }
+    .nav.is-hidden {
+        -webkit-transition: -webkit-transform 375ms;
+        transition: -webkit-transform 375ms;
+        transition: transform 375ms;
+        transition: transform 375ms, -webkit-transform 375ms;
+    }
+    .nav.is-visible {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-transition: -webkit-transform 375ms;
+        transition: -webkit-transform 375ms;
+        transition: transform 375ms;
+        transition: transform 375ms, -webkit-transform 375ms;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+}
+/* ---------------------------------------------- END NAV ----------------------------------------------- */
+
+
+
+
+
+
+
+
+/* ----------------------------------------------- FOOTER ----------------------------------------------- */
+footer {padding-top:2rem}
+#footer-wrapper > div:nth-child(1) {
+    margin-bottom:2rem;
+    padding-bottom:2rem;
+}
+#sos-logo {
+    height:3.625rem;
+    width:3.4375rem
+}
+#outpost-logo {
+    height:3.625rem;
+    width:2.6875rem
+}
+#social {
+    margin-bottom:4rem;
+    width:9.5625rem
+}
+#social a,
+#social a > svg {height: 1.1875rem}
+
+#social a:nth-child(1),
+#social a:nth-child(1) > svg {width:.5625rem}
+
+#social a:nth-child(2),
+#social a:nth-child(3),
+#social a:nth-child(2) > svg,
+#social a:nth-child(3) > svg {width:1rem}
+
+#social a:nth-child(4),
+#social a:nth-child(5),
+#social a:nth-child(4) > svg,
+#social a:nth-child(5) > svg {width:1.125rem}
+
+#footer-nav > div > a:nth-child(3) {padding-bottom:1rem}
+
+#copyright {margin-bottom:1.5rem;margin-top:4rem}
+
+@media screen and (min-width:23.4375em) {
+    #sos-logo {
+        height:2.75rem;
+        width:2.625
+    }
+    #outpost-logo {
+        height:2.75rem;
+        width:2.0625rem
+    }
+    #social{margin-bottom:12.1875rem}
+    #copyright{margin-top:0}
+}
+@media screen and (min-width:30em) {
+    #sos-logo {
+        height:3.625rem;
+        width:3.4375rem
+    }
+    #outpost-logo {
+        height:3.625rem;
+        width:2.6875rem
+    }
+    #social{margin-bottom:12.625rem}
+}
+@media screen and (min-width:35em) {
+    #footer-wrapper {padding-bottom:2rem}
+    #social{margin-bottom:11.4375rem}
+    #footer-nav {width:auto}
+    #footer-nav div:nth-child(1){margin-right:2.625rem}
+    #footer-nav > div > a:nth-child(3) {padding-bottom:0}
+    #copyright{
+        margin-bottom:0;
+        width:auto;text-align:left}
+}
+@media screen and (min-width:37.5em) {
+    #social {width:12.75rem}
+    #social a {height:1.375rem}
+    #social a:nth-child(1) {width:.625rem}
+    #social a:nth-child(2),
+    #social a:nth-child(3) {width:1.1875rem}
+    #social a:nth-child(4),
+    #social a:nth-child(5) {width:1.3125rem}
+}
+@media screen and (min-width:70em) {
+    footer {padding-top:3.5625rem}
+    #footer-wrapper {padding-bottom:5rem}
+    #footer-wrapper > div:nth-child(1) {
+        margin-bottom:4.1875rem;
+        padding-bottom:3.5rem;
+    }
+    #sos-logo {
+        height:5.4375rem;
+        width:5.1875rem
+    }
+    #outpost-logo {
+        height:5.4375rem;
+        width:4.0625rem
+    }
+    #social {margin-bottom:18.125rem}
+    #footer-nav > div > a:nth-child(3) {padding-bottom:.3rem}
+}
+
+/* IE10 Social Icon Fixes */
+@media screen and (min-width:0\0) {
+    #social {width:12.75rem\9;}
+    #social a {height: 1.375rem\9;}
+    #social a:nth-child(1) {width:0.625rem\9;}
+    #social a:nth-child(2),
+    #social a:nth-child(3) {width:1.1875rem\9;}
+    #social a:nth-child(4),
+    #social a:nth-child(5) {width:1.3125rem\9;}
+
+    #social a {margin-right:1.78125rem\9;}
+    #social a:nth-child(5){margin-right:0\9;}
+}
+/* IE10 Social Icon Fixes */
+/* --------------------------------------------- END FOOTER --------------------------------------------- */

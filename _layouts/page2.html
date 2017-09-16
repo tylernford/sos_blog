@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<main class="bg-putty pb-3_75 ph3 pt5   ph4-ns pt6-ns   ph5-l">
+    <div class="center mb-3_75 mw-72_5 relative z-1">
+
+        <!--   Card Grid   -->
+        <div class="flex flex-wrap justify-between   css-post-card-grid   js-scroll-container">
+            {% for post in site.posts limit:9 %}
+                {% include card.html %}
+            {% endfor %}
+        </div>
+        <!-- End Card Grid -->
+    </div>
+</main>

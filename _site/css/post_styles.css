@@ -1,16 +1,25 @@
-/* ---- Utilities ---- */
+/* --------------------------------------------- UTILITIES ---------------------------------------------- */
+.dark-red {color:#6c302a}
 .darkest-red{color:#471B13}
-.c-mid-gray{color:#5E5B5B}
+.h-_125{height:.125rem}
+.h-_25{height:.25rem}
 .h-1_75{height:1.75rem}
-.w-1_75{width:1.75rem}
+.ie-flex-shrink { -ms-flex: 0 1 auto; }
+.mid-gray{color:#5E5B5B}
 .mw-7_25{max-width:7.25rem}
 .mw-47_5{max-width:47.5rem}
+.w-_25{width:.25rem}
+.w-1_25{width:1.25rem}
+.w-1_75{width:1.75rem}
 @media screen and (min-width:30em) {
+    .h-_25-ns{height:.25rem}
+    .h-_375-ns {height:.375rem}
     .h-2_5-ns{height:2.5rem}
     .mw-8_75-ns{max-width:8.75rem}
     .w-2_5-ns{width:2.5rem}
+    .w-_375-ns {width:.375rem}
 }
-/* ---- Utilities ---- */
+/* ------------------------------------------- END UTILITIES -------------------------------------------- */
 
 
 
@@ -18,6 +27,8 @@
 
 
 
+
+.css-blog-post-title{letter-spacing:.04166666667em}
 .nested-content > h3, .nested-content > h4, .nested-content > p, .nested-content > ul {
     margin-left:auto;
     margin-right:auto;
@@ -25,12 +36,13 @@
 }
 .nested-content > h3, .nested-content > h4 {
     color:#232B35;
+    font-weight:700;
     text-transform:uppercase;
 }
 .nested-content > h3 {
     font-size:1.25rem;
     letter-spacing:0.03333333333em;
-    margin-bottom:16px;
+    margin-bottom:1rem;
     margin-top:4rem;
     padding-left:1rem;
     padding-right:1rem;
@@ -38,7 +50,6 @@
 }
 .nested-content > h4 {
     font-size:1rem;
-    font-weight:700;
     letter-spacing:0.0125em;
     margin-bottom:20px;
     margin-top:36px;
@@ -54,25 +65,6 @@
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.css-notification {
-    padding-left:1rem;
-    padding-right:1rem;
-}
-.css-notification > p {
-    background-color:#6C302A;
-    border-radius: 4px;
-    color:#fff;
-    font-size:14px;
-    font-weight:600;
-    line-height:1.5em;
-    margin-bottom:3rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:3rem;
-    max-width:52.5rem;
-    padding: 1.5rem 1rem;
-}
-
 .nested-content > ul {
     color:#5E5B5B;
     font-size:.875rem;
@@ -88,6 +80,7 @@
     background-size:3px 3px;
     padding-left: 1.5rem;
 }
+
 
 /* ---- Full Width Image ---- */
 .css-full-width-image {
@@ -109,7 +102,9 @@
     padding-left:1rem;
     padding-right:1rem;
 }
-/* ---- Centered Image ---- */
+/* -- End Full Width Image -- */
+
+/* ------ Centered Image ------ */
 .css-centered-image {
     margin-bottom:/*6rem*/5rem;
     margin-top:/*76px*/4rem;
@@ -127,94 +122,28 @@
     margin-top:15px;
 
 }
+/* ---- End Centered Image ---- */
 
-@media screen and (min-width:30em) {
-    .nested-content > h3 {
-        font-size:1.875rem;
-        margin-bottom:43px;
-        margin-top:5rem;
-        padding-left:2rem;
-        padding-right:2rem;
-    }
-    .nested-content > h4 {
-        font-size:1.25rem;
-        padding-left:2rem;
-        padding-right:2rem;
-    }
-    .nested-content > p {
-        font-size:19px;
-        line-height:29px;
-        margin-bottom:29px;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-    .nested-content > ul {
-        font-size:1rem;
-        padding-left:2rem;
-        padding-right:2rem;
-    }
-    .nested-content > ul > li {
-        background-position: .2rem .75rem;
-    }
-    .css-notification {
-        padding-left:2rem;
-        padding-right:2rem;
-    }
-    .css-notification > p {
-        font-size:16px;
-        padding:2rem
-    }
-    .css-centered-image {
-        padding-left:2rem;
-        padding-right:2rem;
-    }
+/* ------ Notification ------ */
+.css-notification {
+    padding-left:1rem;
+    padding-right:1rem;
 }
-@media screen and (min-width:60em) {
-    .nested-content > h3 {
-        padding-left:0;
-        padding-right:0;
-    }
-    .nested-content > h4 {
-        font-size:1.25rem;
-        padding-left:0;
-        padding-right:0;
-    }
-    .css-notification {padding:0;}
-    .css-full-width-image {
-        margin: 6rem auto;
-    }
-    .css-full-width-image > p {
-        padding-left:58px;
-        padding-right:58px
-    }
-    .css-centered-image {padding:0}
-
-    .nested-content > p {
-        padding:0;
-    }
-    .nested-content > ul {
-        padding-left:12px;
-        padding-right:0;
-    }
-    .nested-content > ul > li {
-        background-position: 0 .75rem;
-    }
-    .css-notification > p {
-        font-size:18px;
-        margin-bottom:5rem;
-        margin-top:72px;
-        padding-bottom:26px;
-        padding-left:2.5rem;
-        padding-right:2.5rem;
-        padding-top:26px;
-    }
+.css-notification > p {
+    background-color:#6C302A;
+    border-radius: 4px;
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    line-height:1.5em;
+    margin-bottom:3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:3rem;
+    max-width:52.5rem;
+    padding: 1.5rem 1rem;
 }
-
-
-
-
-
-
+/* ---- End Notification ---- */
 
 /* Video Embed*/
 .video-wrapper {
@@ -243,7 +172,56 @@
     margin-left:.8125rem;
     margin-right:.8125rem
 }
+/* -- End Divider -- */
+
+/* - Related Posts - */
+.css-related-posts {padding-bottom:60px;}
+.css-related-posts > h5{
+    font-size:1.25;
+    letter-spacing:0.1071428571em;
+    margin-bottom:0
+}
+
+/* End Related Posts */
+
 @media screen and (min-width:30em) {
+    .nested-content > h3 {
+        font-size:1.875rem;
+        margin-bottom:43px;
+        margin-top:5rem;
+        padding-left:2rem;
+        padding-right:2rem;
+    }
+    .nested-content > h4 {
+        font-size:1.25rem;
+        padding-left:2rem;
+        padding-right:2rem;
+    }
+    .nested-content > p {
+        font-size:19px;
+        line-height:29px;
+        margin-bottom:29px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .nested-content > ul {
+        font-size:1rem;
+        padding-left:2rem;
+        padding-right:2rem;
+    }
+    .nested-content > ul > li {background-position: .2rem .75rem}
+    .css-centered-image {
+        padding-left:2rem;
+        padding-right:2rem;
+    }
+    .css-notification {
+        padding-left:2rem;
+        padding-right:2rem;
+    }
+    .css-notification > p {
+        font-size:16px;
+        padding:2rem
+    }
     .css-divider{
         margin-bottom:4rem;
         margin-top:60px;
@@ -255,28 +233,45 @@
         margin-left:1.625rem;
         margin-right:1.625rem;
     }
+    .css-related-posts > h5{font-size:1.4rem}
 }
 @media screen and (min-width:60em) {
+    .nested-content > h3 {
+        padding-left:0;
+        padding-right:0;
+    }
+    .nested-content > h4 {
+        font-size:1.25rem;
+        padding-left:0;
+        padding-right:0;
+    }
+    .nested-content > p {padding:0}
+    .nested-content > ul {
+        padding-left:12px;
+        padding-right:0;
+    }
+    .nested-content > ul > li {background-position: 0 .75rem}
+    .css-notification {padding:0}
+    .css-notification > p {
+        font-size:18px;
+        margin-bottom:5rem;
+        margin-top:72px;
+        padding-bottom:26px;
+        padding-left:2.5rem;
+        padding-right:2.5rem;
+        padding-top:26px;
+    }
+    .css-full-width-image {margin: 6rem auto}
+    .css-full-width-image > p {
+        padding-left:58px;
+        padding-right:58px
+    }
+    .css-centered-image {padding:0}
     .css-divider{
         margin-bottom:5rem;
         padding-left:0;
         padding-right:0;
     }
-}
-
-
-
-
-.css-related-posts {padding-bottom:60px;}
-.css-related-posts > h5{
-    font-size:1.25;
-    letter-spacing:0.1071428571em;
-    margin-bottom:0
-}
-@media screen and (min-width:30em) {
-    .css-related-posts > h5{font-size:1.4rem}
-}
-@media screen and (min-width:60em) {
     .css-related-posts > h5{font-size:1.4rem;margin-bottom:3rem}
-    .css-related-posts > div > .css-post-card-outer > .css-post-card-inner {margin-top:0;}
+    .css-related-posts > div > .css-post-card-outer > .css-post-card-inner {margin-top:0}
 }

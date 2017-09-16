@@ -2,31 +2,21 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>SOS - Outpost Games</title>
-
-		<link rel="canonical" href="" />
-		<meta name="description" content="" />
-    	<meta name="keywords" content="" />
-		<meta name="geo.region" content="" />
-		<meta name="geo.placename" content="" />
-		<meta name="robots" content="all" />
+		<title>SOS - Blog</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<!-- Sitewide Styles -->
 		<link href="css/tachyons.css" rel="stylesheet">
-		<link href="css/magnific.css" rel="stylesheet">
-        <link href="css/original_sos_styles.css" rel="stylesheet">
-		<link href="css/new_styles.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+
+		<!-- Blog Post Styles -->
 		<link href="css/post_styles.css" rel="stylesheet">
-		<link href="css/hamburger.css" rel="stylesheet">
+		<link href="css/carousel.css" rel="stylesheet">
+		<link href="css/carousel_theme.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="css/owl.css" />
-		<link rel="stylesheet" href="css/owl.theme.new.css" />
+
 		<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
-
-
-
-
         <script src="https://use.typekit.net/zok1cii.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -35,36 +25,37 @@
 		<![endif]-->
 	</head>
 	<body class="tk-din-2014">
-        {% include nav.html %}
+        {% include site_nav.html %}
 
 		{{ content }}
 
-		{% include footer.html %}
-	</body>
-	<!-- JS Libraries -->
-	<script src="js/jquery-2.1.0.min.js"></script>
-	<script src="js/owl.js"></script>
+		{% include site_footer.html %}
 
-	<!-- Custom JS -->
-	<script src="js/navigation.js"></script>
-	<script>
-	var infScroll = new InfiniteScroll( '.container', {
-		path: '.pagination__next',
-		append: '.post',
- 		responseType: 'document',
-		loadOnScroll: false,
-		history: 'replace',
-		hideNav: '.pagination',
-		button: '.load-next-button'
-	})
-	</script>
-	<script>
-	$(document).ready(function(){
-		$('.owl-carousel').owlCarousel({
-			items:1,
-			loop:true,
-			autoplay:true
-  		});
-	});
-	</script>
+		<!-- JS Libraries -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/owl.js"></script>
+
+		<!-- Custom JS -->
+		<script src="js/navigation.js"></script>
+		<script>
+		$(document).ready(function(){
+			$('.owl-carousel').owlCarousel({
+				items:1,
+				loop:true,
+				autoplay:true
+	  		});
+		});
+		</script>
+		<script>
+		var infScroll = new InfiniteScroll( '.js-scroll-container', {
+			path: '.pagination__next',
+			append: '.post',
+	 		responseType: 'document',
+			loadOnScroll: false,
+			history: 'replace',
+			hideNav: '.pagination',
+			button: '.load-next-button'
+		})
+		</script>
+	</body>
 </html>

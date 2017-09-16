@@ -1,13 +1,3 @@
 ---
-posts:
-- image: assets/post_thumbnails/post_1_image.jpg
-- image: assets/post_thumbnails/post_2_image.jpg
-- image: assets/post_thumbnails/post_3_image.jpg
-- image: assets/post_thumbnails/post_4_image.jpg
-- image: assets/post_thumbnails/post_5_image.jpg
-- image: assets/post_thumbnails/post_6_image.jpg
-- image: assets/post_thumbnails/post_1_image.jpg
-- image: assets/post_thumbnails/post_1_image.jpg
-- image: assets/post_thumbnails/post_1_image.jpg
-layout: index-2
+layout: index_grid
 ---

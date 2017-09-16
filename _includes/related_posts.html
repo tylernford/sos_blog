@@ -1,0 +1,27 @@
+<div class="center flex justify-between mw-47_5   css-divider">
+    <div class="bg-red br1 h-_125 ie-flex-shrink w-100   h-_25-ns   css-divider-left"></div>
+    <div class="flex items-center justify-between   css-divider-middle">
+        <div class="bg-red br-100 h-_25 w-_25   h-_375-ns w-_375-ns"></div>
+        <div class="bg-red br-100 h-_25 w-_25   h-_375-ns w-_375-ns"></div>
+        <div class="bg-red br-100 h-_25 w-_25   h-_375-ns w-_375-ns"></div>
+
+        <div class="bg-red br2 h-_25 w-1_25   w-2_5-ns"></div>
+        <div class="bg-red br2 h-_25 w-1_25   w-2_5-ns"></div>
+        <div class="bg-red br2 h-_25 w-1_25   w-2_5-ns"></div>
+
+        <div class="bg-red br-100 h-_25 w-_25   h-_375-ns w-_375-ns"></div>
+        <div class="bg-red br-100 h-_25 w-_25   h-_375-ns w-_375-ns"></div>
+        <div class="bg-red br-100 h-_25 w-_25   h-_375-ns w-_375-ns"></div>
+    </div>
+    <div class="bg-red br1 h-_125 ie-flex-shrink w-100   h-_25-ns   css-divider-right"></div>
+</div>
+
+
+<div class="center ph3   ph4-ns   ph5-l css-related-posts">
+    <h5 class="dark-red f4 fw7 lh-title tc tracked ttu">Related Posts</h5>
+    <div class="center flex flex-wrap justify-between mw-72_5   css-post-card-grid">
+        {% for post in site.posts limit:3 %}
+            {% include card.html %}
+        {% endfor %}
+    </div>
+</div>

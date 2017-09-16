@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<!--   Grid Index Background Image   -->
+<div class="absolute top-5 w-100 z-0   css-blog-index-background">
+</div>
+<!-- End Grid Index Background Image -->
+<main class="bg-putty pb-3_75 pt-3_75 ph3   ph4-ns   ph5-l">
+    <div class="center mb-3_75 mw-72_5 relative z-1">
+        <h1 class="f2 fw8 gold lh-title mb3 mt0 pt5 tc tracked-narrow ttu   f1-ns mb4-ns   mb5-l pt-6_4375-l">News</h1>
+
+        <!--   Category List  -->
+        <div class="center f6 flex flex-wrap fw7 justify-around lh-title mw-57_5 red tracked ttu   mb4 f4-ns mb5-ns   f3-l mb-6-l   css-category-list">
+            <a class="db link mb2 mh1 mt0 nowrap red   mb-_75-ns mh3-ns   css-current-category" href="">All Articles</a>
+            <a class="db link mb2 mh1 mt0 nowrap red   mb-_75-ns mh3-ns" href="">Category</a>
+            <a class="db link mb2 mh1 mt0 nowrap red   mb-_75-ns mh3-ns" href="">Another Cat</a>
+            <a class="db link mb2 mh1 mt0 nowrap red   mb-_75-ns mh3-ns" href="">Last Category</a>
+        </div>
+        <!-- End Category List -->
+
+
+        <!--   Featured Post   -->
+        {% for post in site.posts limit:1 offset:9 %}
+            <a class="center db link shadow-6-hover   flex@45" href="/">
+                <div class="bg-center cover h5 w-100   h-auto@45 mw-35@45" style="background-image:url({{post.image}});"></div>
+                <div class="bg-white pb4 pt4 w-100 ph3   ph4-ns pt5-ns   ph4@45">
+                    <p class="f6 fw8 lh-solid mb3 mt0 pb1 red tracked-narrow ttu   ph2@45">Topic Here</p>
+                    <h1 class="f4 fw7 lh-title mt0 near-black tracked-narrow ttu   f2-ns   ph2@45   f3@45-60   f2-l mw6-l pr4-l">Blog Title Here and Then Break to New Line</h1>
+                    <p class="f5 fw4 gray lh-title mb4   f-1_125-ns mb5-ns   ph2@45   mw6-l pr4-l">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
+                    <p class="f5 fw4 lh-solid light-silver mb0 tr ttu   f-1_125-ns pb3-ns pt1-ns   ph2@45">08.19.17</p>
+                </div>
+            </a>
+        {% endfor %}
+        <!-- End Featured Post -->
+
+
+        <!--   Card Grid   -->
+        <div class="flex flex-wrap justify-between   css-post-card-grid   js-scroll-container">
+            {% for post in site.posts limit:9 %}
+                {% include card.html %}
+            {% endfor %}
+        </div>
+        <!-- End Card Grid -->
+    </div>
+
+
+    <!--   Infinite Scroll Nav   -->
+    <p class="pagination">
+        <a class="pagination__next" href="page2.html">Next page</a>
+    </p>
+    <!-- End Infinite Scroll Nav -->
+
+
+    <!--   See More Button   -->
+    <button class="b--red ba bg-putty br2 center db f5 fw7 h-3_5 hover-bg-red hover-putty lh-title pointer red tc tk-din-2014 tracked ttu w-100   bw_1875   bw-_25-ns f-1_125-ns h-4_5-ns pt1-ns  mw-35@45   load-next-button">See More Articles</button>
+    <!-- End See More Button -->
+</main>
