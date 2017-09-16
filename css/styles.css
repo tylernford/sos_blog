@@ -30,6 +30,12 @@
 }
 .top-5{top:5rem}
 .tracked-narrow {letter-spacing: .05rem}
+
+/* IE10 Featured Post Width Fixes */
+@media screen and (min-width:0\0) {
+    .mw-50-ie {max-width:50%}
+}
+/* IE10 Featured Post Width Fixes */
 @media screen and (min-width:30em) {
     .bw-_25-ns{border-width:.25rem}
     .f-1_125-ns{font-size:1.125rem}
