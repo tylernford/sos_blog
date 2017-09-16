@@ -42,9 +42,7 @@
     .f6\@45{font-size:.875rem}
     .flex\@45{display:-webkit-box;display:-ms-flexbox;display:flex}
     .h-auto\@45{height:auto}
-    .mw-35\@45{max-width:35rem}
-    .mw-37_5\@45{max-width:37.5rem}
-    .mw-50\@45{max-width:50%}
+    .w-50\@45{width:50%}
     .ph2\@45{padding-left:.5rem;padding-right:.5rem}
     .ph4\@45{padding-left:2rem;padding-right:2rem}
 }
@@ -334,8 +332,121 @@ body.overflow-hidden {overflow: hidden}
 
 
 
-
 /* ----------------------------------------------- FOOTER ----------------------------------------------- */
+footer {padding-top:2rem}
+#footer-wrapper > div:nth-child(1) {
+    margin-bottom:2rem;
+    padding-bottom:2rem;
+}
+#sos-logo {
+    height:3.625rem;
+    width:3.4375rem
+}
+#outpost-logo {
+    height:3.625rem;
+    width:2.6875rem
+}
+#social {
+    margin-bottom:4rem;
+    width:9.5625rem
+}
+#social a,
+#social a > svg {height: 1.1875rem}
+
+#social a:nth-child(1),
+#social a:nth-child(1) > svg {width:.5625rem}
+
+#social a:nth-child(2),
+#social a:nth-child(3),
+#social a:nth-child(2) > svg,
+#social a:nth-child(3) > svg {width:1rem}
+
+#social a:nth-child(4),
+#social a:nth-child(5),
+#social a:nth-child(4) > svg,
+#social a:nth-child(5) > svg {width:1.125rem}
+
+#footer-nav > div > a:nth-child(3) {padding-bottom:1rem}
+
+#copyright {margin-bottom:1.5rem;margin-top:4rem}
+
+@media screen and (min-width:23.4375em) {
+    #sos-logo {
+        height:2.75rem;
+        width:2.625
+    }
+    #outpost-logo {
+        height:2.75rem;
+        width:2.0625rem
+    }
+    #social{margin-bottom:12.1875rem}
+    #copyright{margin-top:0}
+}
+@media screen and (min-width:30em) {
+    #sos-logo {
+        height:3.625rem;
+        width:3.4375rem
+    }
+    #outpost-logo {
+        height:3.625rem;
+        width:2.6875rem
+    }
+    #social{margin-bottom:12.625rem}
+}
+@media screen and (min-width:35em) {
+    #footer-wrapper {padding-bottom:2rem}
+    #social{margin-bottom:11.4375rem}
+    #footer-nav {width:auto}
+    #footer-nav div:nth-child(1){margin-right:2.625rem}
+    #footer-nav > div > a:nth-child(3) {padding-bottom:0}
+    #copyright{
+        margin-bottom:0;
+        width:auto;text-align:left}
+}
+@media screen and (min-width:37.5em) {
+    #social {width:12.75rem}
+    #social a {height:1.375rem}
+    #social a:nth-child(1) {width:.625rem}
+    #social a:nth-child(2),
+    #social a:nth-child(3) {width:1.1875rem}
+    #social a:nth-child(4),
+    #social a:nth-child(5) {width:1.3125rem}
+}
+@media screen and (min-width:70em) {
+    footer {padding-top:3.5625rem}
+    #footer-wrapper {padding-bottom:5rem}
+    #footer-wrapper > div:nth-child(1) {
+        margin-bottom:4.1875rem;
+        padding-bottom:3.5rem;
+    }
+    #sos-logo {
+        height:5.4375rem;
+        width:5.1875rem
+    }
+    #outpost-logo {
+        height:5.4375rem;
+        width:4.0625rem
+    }
+    #social {margin-bottom:18.125rem}
+    #footer-nav > div > a:nth-child(3) {padding-bottom:.3rem}
+}
+
+/* IE10 Social Icon Fixes */
+@media screen and (min-width:0\0) {
+    #social {width:12.75rem\9;}
+    #social a {height: 1.375rem\9;}
+    #social a:nth-child(1) {width:0.625rem\9;}
+    #social a:nth-child(2),
+    #social a:nth-child(3) {width:1.1875rem\9;}
+    #social a:nth-child(4),
+    #social a:nth-child(5) {width:1.3125rem\9;}
+
+    #social a {margin-right:1.78125rem\9;}
+    #social a:nth-child(5){margin-right:0\9;}
+}
+/* IE10 Social Icon Fixes */
+/* --------------------------------------------- END FOOTER --------------------------------------------- */
+/* ----------------------------------------------- FOOTER -----------------------------------------------
 footer {padding-top:2rem}
 #footer-wrapper > div:nth-child(1) {
     margin-bottom:2rem;

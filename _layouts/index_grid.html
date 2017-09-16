@@ -22,26 +22,15 @@ layout: default
 
         <!--   Featured Post   -->
         {% for post in site.posts limit:1 offset:9 %}
-            <!--
-            <a class="center db link shadow-6-hover   flex@45 mw-100" href="/blog" style="">
-                <div class="bg-center cover h5 w-100   h-auto@45 mw-35@45" style="background-image:url({{post.image}});"></div>
-                <div class="bg-white pb4 pt4 w-100 ph3   ph4-ns pt5-ns   mw-37_5@45ph4@45">
+            <a class="center db link shadow-6-hover   flex@45" href="/blog">
+                <div class="bg-center cover h5 w-100   h-auto@45 w-50@45" style="background-image:url({{post.image}});"></div>
+                <div class="bg-white pb4 pt4 w-100 ph3   ph4-ns pt5-ns   w-50@45 ph4@45">
                     <p class="f6 fw8 lh-solid mb3 mt0 pb1 red tracked-narrow ttu   ph2@45">Topic Here</p>
                     <h1 class="f4 fw7 lh-title mt0 near-black tracked-narrow ttu   f2-ns   ph2@45   f3@45-60   f2-l mw6-l pr4-l">Blog Title Here and Then Break to New Line</h1>
                     <p class="f5 fw4 gray lh-title mb4   f-1_125-ns mb5-ns   ph2@45   mw6-l pr4-l">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
                     <p class="f5 fw4 lh-solid light-silver mb0 tr ttu   f-1_125-ns pb3-ns pt1-ns   ph2@45">08.19.17</p>
                 </div>
             </a>
-        -->
-        <a class="center db link shadow-6-hover   flex@45 mw-100" href="/blog" style="">
-            <div class="bg-center cover h5 w-100   h-auto@45 mw-50@45" style="background-image:url({{post.image}});"></div>
-            <div class="bg-white pb4 pt4 w-100 ph3   ph4-ns pt5-ns   mw-50@45 ph4@45">
-                <p class="f6 fw8 lh-solid mb3 mt0 pb1 red tracked-narrow ttu   ph2@45">Topic Here</p>
-                <h1 class="f4 fw7 lh-title mt0 near-black tracked-narrow ttu   f2-ns   ph2@45   f3@45-60   f2-l mw6-l pr4-l">Blog Title Here and Then Break to New Line</h1>
-                <p class="f5 fw4 gray lh-title mb4   f-1_125-ns mb5-ns   ph2@45   mw6-l pr4-l">Short summary, keep it a couple words. A sentence. Nothing too wordy.</p>
-                <p class="f5 fw4 lh-solid light-silver mb0 tr ttu   f-1_125-ns pb3-ns pt1-ns   ph2@45">08.19.17</p>
-            </div>
-        </a>
         {% endfor %}
         <!-- End Featured Post -->
 
