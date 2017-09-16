@@ -33,7 +33,9 @@
 
 /* IE10 Featured Post Width Fixes */
 @media screen and (min-width:0\0) {
-    .mw-50-ie {max-width:50%}
+    @media screen and (min-width:60em) {
+        .mw-50-ie {display:none!important}
+    }
 }
 /* IE10 Featured Post Width Fixes */
 @media screen and (min-width:30em) {
